@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="auth-container">
+    <h2>Create Your SmartBank Account</h2>
+    <form method="POST" class="auth-form">
+        <input type="text" name="username" placeholder="Choose Username" required>
+        <input type="password" name="password" placeholder="Choose Password" required>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already a member? <a href="{{ url_for('auth.login') }}">Login</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard">
+    <h2>Welcome Back to Bank of India</h2>
+    <p class="balance">💰 Current Balance: <span>₹{{ balance }}</span></p>
+
+    <!-- Deposit and Withdraw Options -->
+    <div class="transaction-forms">
+        <form method="POST" action="{{ url_for('transaction.deposit') }}">
+            <h3>Deposit Money</h3>
+            <input type="number" step="0.01" name="amount" placeholder="Enter deposit amount" required>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <form method="POST" action="{{ url_for('transaction.withdraw') }}">
+            <h3>Withdraw Money</h3>
+            <input type="number" step="0.01" name="amount" placeholder="Enter withdrawal amount" required>
+            <button type="submit">Withdraw</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="landing">
+    <div class="hero">
+        <h1>Welcome to SmartBank</h1>
+        <p>Secure. Reliable. Modern Banking for Everyone.</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('auth.login') }}" class="btn">Login</a>
+            <a href="{{ url_for('auth.register') }}" class="btn btn-secondary">Open an Account</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h3>💳 Easy Transactions</h3>
+            <p>Deposit and withdraw your money anytime, anywhere.</p>
+        </div>
+        <div class="feature">
+            <h3>🔒 Secure Banking</h3>
+            <p>Top-notch encryption ensures your money is safe with us.</p>
+        </div>
+        <div class="feature">
+            <h3>📊 Track History</h3>
+            <p>View your complete transaction history anytime.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
